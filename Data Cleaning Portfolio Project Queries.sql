@@ -133,13 +133,11 @@ WITH RowNumCTE AS(
 Select *,
 	ROW_NUMBER() OVER (
 	PARTITION BY ParcelID,
-				 PropertyAddress,
-				 SalePrice,
-				 SaleDate,
-				 LegalReference
-				 ORDER BY
-					UniqueID
-					) row_num
+		     PropertyAddress,
+		     SalePrice,
+		     SaleDate,
+		     LegalReference
+ ORDER BY UniqueID) row_num
 
 From PortfolioProject.dbo.NashvilleHousing
 --order by ParcelID
@@ -155,13 +153,11 @@ WITH RowNumCTE AS(
 Select *,
 	ROW_NUMBER() OVER (
 	PARTITION BY ParcelID,
-				 PropertyAddress,
-				 SalePrice,
-				 SaleDate,
-				 LegalReference
-				 ORDER BY
-					UniqueID
-					) row_num
+		     PropertyAddress,
+		     SalePrice,
+		     SaleDate,
+		     LegalReference
+ ORDER BY UniqueID) row_num
 
 From PortfolioProject.dbo.NashvilleHousing
 --order by ParcelID
